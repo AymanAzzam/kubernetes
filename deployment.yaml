@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      component: wms
+  template:
+    metadata:
+      labels:
+        component: wms
+    spec:
+      containers:
+        - name: wms
+          image: aymanazzammmc/app-demo:latest
+          ports:
+            - containerPort: 3000
