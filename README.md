@@ -31,8 +31,8 @@ minikube dashboard
 eval $(minikube docker-env)
 docker ps
 ```
-8. Get the ip of minikube node to access the application
+8. Open a tunnel between the host and minikube cluster for the node-port service
 ```
-minikube ip
+minikube service node-port
 ```
-9. Open the browser on the minikube ip with port 31515
+9. Wait till the website load on the browser
